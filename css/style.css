@@ -3,3 +3,31 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+  /* Colors */
+  --color-primary: #C56520;
+  --color-background: #D8D8D8;
+  --color-text: #000000;
+
+  /* Font Families */
+  --font-hero: 'Julius Sans One', sans-serif;
+  --font-speaker-name: 'ADLaM Display', sans-serif;
+  --font-p: 'Teachers', sans-serif;
+
+  /* Font Sizes */
+  --size-hero: 96px;
+  --size-speaker-name: 36px;
+  --size-p: 36px;
+
+  /* Font Weights */
+  --weight-hero: 900;
+  --weight-speaker-name: 400; /* 400 is the regular weight */
+  --weight-p: 400;
+}
+
+body {
+  font-family: var(--font-p);
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
