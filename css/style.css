@@ -16,13 +16,13 @@
   --font-p: 'Teachers', sans-serif;
 
   /* Font Sizes */
-  --size-hero: 96px;
+  --size-hero: 105px;
   --size-speaker-name: 36px;
   --size-p: 36px;
 
   /* Font Weights */
-  --weight-hero: 900;
-  --weight-speaker-name: 400; /* 400 is the regular weight */
+  --weight-hero: 600;
+  --weight-speaker-name: 500; /* 400 is the regular weight */
   --weight-p: 400;
 }
 
@@ -30,4 +30,136 @@ body {
   font-family: var(--font-p);
   background-color: var(--color-background);
   color: var(--color-text);
+}
+
+/* ----------------------------------
+   2. NAVBAR
+---------------------------------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 60px;
+}
+
+.logo {
+  height: 40px; /* No need for width, as this is a img and will scale automatically */
+  cursor: pointer; 
+  z-index: 10; /* This is here, because the wave even thought you can't see it entering menu, in reality it is all over the page (behaving like glass), so i want it to be in front as much as possible */
+}
+
+.menu-icon {
+  height: 24px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* ----------------------------------
+   3. THE MAIN LAYOUT (FLEXBOX)
+---------------------------------- */
+.container {
+  display: flex; /* Enabling flex in css is the equivalent to auto layout in Figma */
+  align-items: center; /* Centers vertically */
+  justify-content: space-around; /* Distributes space evenly */
+  min-height: 80vh;
+  padding: 0 5%;
+}
+
+.left-side {
+  width: 50%; 
+  position: relative; /* Tells the ABSOLUTE shapes inside to stay inside this box (WITHOUT THIS EVERYTHING COLLAPSES!) */
+  height: 600px; 
+}
+
+.right-side {
+  width: 25%; /* If i were to use fixed width here, on smaller screens, the text would have wrapped, which is bad */
+  margin-top: 40px;
+}
+
+/* ----------------------------------
+   4. THE IMAGE LAYERS 
+---------------------------------- */
+
+/* SHARE. CONNECT. ENJOY. */
+.main-title {
+  font-family: var(--font-hero);
+  font-weight: var(--weight-hero);
+  font-size: var(--size-hero);
+  line-height: 0.9;
+  position: absolute;
+  top: -5%;
+  left: 0;
+  z-index: 4; /* Moves element front and back (layers) */
+}
+
+
+/* The Orange Circle */
+.orange-circle {
+  width: 94%; /* Scales dynamically with the screen */
+  position: absolute;
+  top: -36%;
+  left: 10%;
+  z-index: 2; 
+}
+
+/* The Main Speaker */
+.speaker {
+  width: 82%; 
+  position: absolute;
+  top: 25%;
+  left: 20%;
+  z-index: 3; 
+}
+
+/* The Wavy Lines */
+.wave-line1 {
+  width: 250%;
+  position: absolute;
+  top: -122%;
+  left: -30%;
+  z-index: 1; 
+  transform: rotate(9deg); 
+}
+
+/* ----------------------------------
+   5. RIGHT SIDE TEXT & BUTTONS
+---------------------------------- */
+.product-title {
+  font-family: var(--font-speaker-name);
+  font-weight: var(--weight-speaker-name);
+  font-size: var(--size-speaker-name);
+  margin-bottom: 15px;
+}
+
+.product-text {
+  font-family: var(--font-p);
+  font-size: var(--size-p);
+  font-weight: var(--weight-p);
+  
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.button-group {
+  display: flex;
+  gap: 20px; /* Puts a gap between the two buttons */
+}
+
+.btn {
+  padding: 12px 35px;
+  font-family: var(--font-speaker-name);
+  font-weight: var(--weight-speaker-name);
+  font-size: var(--size-speaker-name);
+  text-decoration: none;
+  border-radius: 25px; 
+}
+
+.btn-orange {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-text);
+  border: 2px solid var(--color-text);
 }
