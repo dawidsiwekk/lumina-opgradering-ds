@@ -222,3 +222,25 @@ body {
                                                                            /* 3 PAGE STARTS HERE! */
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
+/* ----------------------------------
+   PRODUCT SHOP PAGE (ALL)
+---------------------------------- */
+.product-page {
+  min-height: 72vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;      
+}
+
+/* ----------------------------------
+   THE PRODUCT CONTAINER
+---------------------------------- */
+.product-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;    
+  z-index: 10;   
+  padding-left: 80%;             
+}
+
+
