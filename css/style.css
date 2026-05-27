@@ -223,24 +223,64 @@ body {
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* ----------------------------------
-   PRODUCT SHOP PAGE (ALL)
+   PAGE 3
 ---------------------------------- */
 .product-page {
-  min-height: 72vh;
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;      
+  justify-content: center;
+  padding: 80px 5%;
+  overflow: hidden;         
 }
 
 /* ----------------------------------
-   THE PRODUCT CONTAINER
+   FLEX CONTAINERS
 ---------------------------------- */
+
 .product-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;    
-  z-index: 10;   
-  padding-left: 80%;             
+  justify-content: space-between;
+  width: 100%;        
+  z-index: 10;                
 }
 
+.product-gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+}
 
+.product-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 35%;
+}
+
+/* ----------------------------------
+   ABSOLUTE ELEMENTS
+---------------------------------- */
+
+.product-footer {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  bottom: 20px;
+  left: 0;
+  width: 105%;
+  padding: 0 6%;
+  z-index: 10;
+}
+
+.wave-line2 {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  width: 100%;
+  z-index: 1;                
+  pointer-events: none;      
+}
