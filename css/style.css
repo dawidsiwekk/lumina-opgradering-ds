@@ -278,6 +278,25 @@ body {
   width: 35%;
 }
 
+.product-name {
+  font-family: var(--font-speaker-name);
+  font-weight: var(--weight-speaker-name);
+  font-size: var(--size-speaker-name);
+  color: var(--color-text);
+}
+
+.price-display {
+  font-family: var(--font-p);
+  font-weight: var(--weight-p);
+  font-size: var(--size-p);
+  margin-bottom: 25px;
+}
+
+.tax-info {
+  font-size: 20px;
+  color: #8C8C8C;            
+}
+
 /* ----------------------------------
    UTILITY & DECORATIVE OVERLAYS
 ---------------------------------- */
