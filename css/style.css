@@ -223,7 +223,7 @@ body {
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* ----------------------------------
-   PAGE 3
+   GLOBAL LAYOUT
 ---------------------------------- */
 .product-page {
   position: relative;
@@ -235,9 +235,8 @@ body {
 }
 
 /* ----------------------------------
-   FLEX CONTAINERS
+   PRIMARY STRUCTURAL CORES
 ---------------------------------- */
-
 .product-container {
   display: flex;
   align-items: center;
@@ -246,6 +245,9 @@ body {
   z-index: 10;                
 }
 
+/* ----------------------------------
+   PRODUCT GALLERY (LEFT)
+---------------------------------- */
 .product-gallery {
   display: flex;
   align-items: center;
@@ -253,6 +255,22 @@ body {
   width: 60%;
 }
 
+.main-product-img {
+  width: 100%;
+  max-width: 1000px;          
+}
+
+.arrow-btn-left,
+.arrow-btn-right {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 20px;
+}
+
+/* ----------------------------------
+   PRODUCT INFO (RIGHT)
+---------------------------------- */
 .product-details {
   display: flex;
   flex-direction: column;
@@ -261,9 +279,8 @@ body {
 }
 
 /* ----------------------------------
-   ABSOLUTE ELEMENTS
+   UTILITY & DECORATIVE OVERLAYS
 ---------------------------------- */
-
 .product-footer {
   position: absolute;
   display: flex;
