@@ -297,6 +297,17 @@ body {
   color: #8C8C8C;            
 }
 
+.btn-buy {
+  background-color: var(--color-primary);
+  font-family: var(--font-speaker-name);
+  font-size: var(--size-speaker-name);
+  font-weight: var(--weight-speaker-name);
+  color: var(--color-text);
+  text-decoration: none;
+  padding: 12px 55px;
+  border-radius: 25px;
+}
+
 /* ----------------------------------
    UTILITY & DECORATIVE OVERLAYS
 ---------------------------------- */
@@ -310,6 +321,40 @@ body {
   width: 105%;
   padding: 0 6%;
   z-index: 10;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+  margin-left: -5%;
+}
+
+.social-links img {
+  width: 40px;                
+}
+
+.trustpilot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.trustpilot a {
+  font-family: var(--font-p);
+  font-size: 13px;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.trustpilot img {
+  width: 130px;
+}
+
+.trustpilot p {
+  font-family: var(--font-p);
+  font-size: 12px;
+  color: var(--color-text);
 }
 
 .wave-line2 {
