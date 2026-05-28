@@ -178,17 +178,17 @@ body {
 ---------------------------------- */
 .features {
   display: grid;
+  align-items: flex-start;
   grid-template-columns: repeat(3, 1fr); /* Divides grid container into 3 colums of equal width that autommatically grow/shrink. Repeat(3, 1fr) Do exact thing 3 times, each unit takes equally much space. (The same as 1fr 1fr 1fr) */
   gap: 22vw;
-  padding: 340px 3%;
-  align-items: flex-start; /* Locks alignment to the top of each track */
+  padding: clamp(100px, 15vw, 340px) 3%;
 }
 
 .share { 
-  margin-top: 300px; 
+  margin-top: 15vw;
 }
 .enjoy { 
-  margin-top: 620px; 
+  margin-top: 30vw; 
 }
 
 /* ----------------------------------
@@ -202,6 +202,7 @@ body {
 
 .features img {
   height: auto;
+  width: 100%;
   max-width: 360px;
   margin-bottom: 1px;
 }
