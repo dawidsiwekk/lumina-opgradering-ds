@@ -16,9 +16,9 @@
   --font-p: 'Teachers', sans-serif;
 
   /* Font Sizes */
-  --size-hero: 105px;
-  --size-speaker-name: 36px;
-  --size-p: 36px;
+  --size-hero: clamp(55px, 7.3vw, 105px); /* clamp() for fluidly size change (using @media would be a chop) */     
+  --size-speaker-name: clamp(22px, 2.5vw, 36px);
+  --size-p: clamp(16px, 1.8vw, 26px);
 
   /* Font Weights */
   --weight-hero: 600;
@@ -33,13 +33,17 @@ body {
   overflow-x: hidden; /* It makes x-axel not exed the screen */
 }
 
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+                                                                           /* 1 PAGE STARTS HERE! */
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
 /* ----------------------------------
    2. NAVBAR
 ---------------------------------- */
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 30px 60px;
+  padding: 1vw 2vw;
 }
 
 .logo {
