@@ -47,12 +47,12 @@ body {
 }
 
 .logo {
-  height: 40px; /* No need for width, as this is a img and will scale automatically */
+  height: clamp(25px, 2.7vw, 40px);
   cursor: pointer; 
 }
 
 .menu-icon {
-  height: 24px;
+  height: clamp(16px, 1.6vw, 24px);
   cursor: pointer;
 }
 
@@ -61,21 +61,22 @@ body {
 ---------------------------------- */
 .container {
   display: flex; /* Enabling flex in css is the equivalent to auto layout in Figma */
-  align-items: center; /* Centers vertically */
-  justify-content: space-around; /* Distributes space evenly */
+  align-items: center;
+  justify-content: space-around;
   min-height: 80vh;
   padding: 0 5%;
+  gap: 4vw;
 }
 
 .left-side {
-  width: 50%; 
   position: relative; /* Tells the ABSOLUTE shapes inside to stay inside this box (WITHOUT THIS EVERYTHING COLLAPSES!) */
-  height: 600px; 
+  width: 53%; 
+  height: clamp(350px, 42vw, 600px); 
 }
 
 .right-side {
-  width: 25%; /* If i were to use fixed width here, on smaller screens, the text would have wrapped, which is bad */
-  margin-top: 40px;
+  width: 35%;
+  margin: 6vw;
 }
 
 /* ----------------------------------
@@ -84,21 +85,21 @@ body {
 
 /* SHARE. CONNECT. ENJOY. */
 .main-title {
+  position: absolute;
   font-family: var(--font-hero);
   font-weight: var(--weight-hero);
   font-size: var(--size-hero);
   line-height: 0.9;
-  position: absolute;
-  top: -5%;
-  left: 0;
-  z-index: 4; /* Moves element front and back (layers) */
+  top: 0%;
+  left: 0%;
+  z-index: 10; /* Moves element front and back (layers) */
 }
 
 
 /* The Orange Circle */
 .orange-circle {
-  width: 94%; /* Scales dynamically with the screen */
   position: absolute;
+  width: 94%;
   top: -36%;
   left: 10%;
   z-index: 2; 
@@ -106,22 +107,22 @@ body {
 
 /* The Main Speaker */
 .speaker {
-  width: 82%; 
   position: absolute;
-  top: 25%;
-  left: 20%;
+  width: 82%; 
+  top: 27%;
+  left: 25%;
   z-index: 3; 
 }
 
 /* The Wavy Lines */
 .wave-line1 {
-  width: 250%;
   position: absolute;
+  width: 250%;
   top: -122%;
   left: -30%;
   z-index: 1; 
   transform: rotate(9deg); 
-  pointer-events: none; /* Clicks now pass straight through the invisible glass box that is behind the HUGE wave, making it possible to click on all buttons */
+  pointer-events: none; /* Clicks now pass straight through the "invisible glass box" that is behind the HUGE wave, making it possible to click on all buttons */
 }
 
 /* ----------------------------------
