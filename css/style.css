@@ -292,6 +292,17 @@ body {
   border: none;
   cursor: pointer;
   padding: 20px;
+  transition: transform 0.2s ease;
+}
+
+.arrow-btn-left:hover,
+.arrow-btn-right:hover {
+  transform: scale(1.15);  
+}
+
+.arrow-btn-left:active,
+.arrow-btn-right:active {
+  transform: scale(0.95); /* To get that click feeling */
 }
 
 .arrow-btn-left img,
@@ -398,4 +409,15 @@ body {
   width: 100%;
   z-index: 1;                
   pointer-events: none;      
+}
+
+/* ----------------------------------
+   BUTTONS HOVER
+---------------------------------- */
+
+.btn:hover, 
+.btn-buy:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(197, 101, 32, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
