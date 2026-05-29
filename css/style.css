@@ -48,6 +48,16 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 1vw 2vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: transform 0.5s ease-in-out;
+}
+
+.navbar.hidden {
+  transform: translateY(-100%); 
 }
 
 .logo {
@@ -69,6 +79,7 @@ body {
   justify-content: space-around;
   min-height: 80vh;
   padding: 0 5%;
+  padding-top: clamp(70px, 7vw, 180px);
   gap: 4vw;
 }
 
@@ -185,9 +196,9 @@ body {
   align-items: flex-start;
   grid-template-columns: repeat(3, 1fr); /* Divides grid container into 3 colums of equal width that autommatically grow/shrink. Repeat(3, 1fr) Do exact thing 3 times, each unit takes equally much space. (The same as 1fr 1fr 1fr) */
   gap: clamp(40px, 22vw, 450px);
-  padding: clamp(60px, 10vw, 200px) 5%;
+  padding: clamp(80px, 10vw, 300px) 5%;
   width: 100%;
-  scroll-margin-top: -7.3vw;
+  scroll-margin-top: -9.4vw;
 }
 
 .share { 
@@ -245,7 +256,7 @@ body {
   justify-content: center;
   padding: 80px clamp(25px, 6vw, 80px) 5vw;
   overflow: hidden;  
-  margin-top: 20vh;
+  margin-top: 0vh;
 }
 
 /* ----------------------------------
