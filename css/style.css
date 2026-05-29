@@ -348,7 +348,7 @@ body {
   color: var(--color-text);
   text-decoration: none;
   padding: 12px 55px;
-  border-radius: 25px;
+  border-radius: 50px;
   white-space: nowrap;
 }
 
